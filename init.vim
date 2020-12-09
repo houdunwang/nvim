@@ -239,6 +239,8 @@ Plug 'turbio/bracey.vim'
 Plug 'preservim/tagbar'
 
 "Plug 'alvan/vim-closetag'
+" 同时修改标签名
+Plug 'AndrewRadev/tagalong.vim'
 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
