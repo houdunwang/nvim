@@ -7,8 +7,6 @@ set number
 
 let g:python_host_prog = '/usr/bin/python3'
 let g:python3_host_prog = '/usr/local/bin/python3.9'
-highlight link htmlTag htmlTagName
-highlight link htmlEndTag htmlTagName
 "共享剪贴板
 "set clipboard+=unnamed
 set clipboard+=unnamedplus
@@ -237,11 +235,14 @@ Plug 'turbio/bracey.vim'
 
 Plug 'preservim/tagbar'
 
-"Plug 'alvan/vim-closetag'
+" 关闭标签
+Plug 'alvan/vim-closetag'
+
 " 同时修改标签名
 Plug 'AndrewRadev/tagalong.vim'
 
 Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 let g:bracey_server_allow_remote_connections=1                   
@@ -250,7 +251,7 @@ let g:bracey_server_port=8080
 
 "======= nerdcommenter
 " Create default mappings
-let g:NERDCreateDefaultMappings = 1
+" let g:NERDCreateDefaultMappings = 1
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -337,7 +338,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-" 获取上/下错误发生的位置
+获取上/下错误发生的位置
 nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
 nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
 
