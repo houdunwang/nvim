@@ -5,8 +5,10 @@ let mapleader=" "
 "显示行号
 set number
 
-let g:loaded_python_provider = 0
-
+let g:python_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = '/usr/local/bin/python3.9'
+highlight link htmlTag htmlTagName
+highlight link htmlEndTag htmlTagName
 "共享剪贴板
 "set clipboard+=unnamed
 set clipboard+=unnamedplus
@@ -21,12 +23,11 @@ set numberwidth=5
 "set columns=85
 
 "VIM风格
-set termguicolors
-colorscheme deus
-"color deus
-"colorscheme gruvbox
-highlight Normal guibg=NONE ctermbg=None
+colorscheme one
 set background=dark
+set termguicolors
+
+highlight Normal guibg=NONE ctermbg=None
 
 "状态栏显示方式 0:不显示 1:多窗口显示 2:始终显示
 set laststatus=2
@@ -91,16 +92,12 @@ nmap <C-e> <C-^>
 "map s :w<nop>
 
 "保存文件
-map s  :w<CR>
+" map s  :w<CR>
 " imap <C-s> <Esc>:w<CR>
 
 "退出
 "map qq :q<CR>
 "imap qq <Esc>:q<CR>
-
-"映射home与end键
-imap <C-j> <Esc>I
-imap <C-k> <Esc>A
 
 "进入命令模式
 nmap , :
