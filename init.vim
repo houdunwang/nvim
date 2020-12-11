@@ -22,7 +22,8 @@ set numberwidth=5
 
 "VIM风格
 set termguicolors
-color deus
+colorscheme deus
+"color deus
 "colorscheme gruvbox
 highlight Normal guibg=NONE ctermbg=None
 set background=dark
@@ -84,18 +85,18 @@ map <LEADER>sc :set spell!<CR>
 
 "最近文件切换 　
 "imap <C-e> <Esc><C-^>
-nmap ee <C-^>
+nmap <C-e> <C-^>
 
 "让s键失效
-map s :w<nop>
+"map s :w<nop>
 
 "保存文件
-map ss  :w<CR>
+map s  :w<CR>
 " imap <C-s> <Esc>:w<CR>
 
 "退出
-map qq :q<CR>
-imap qq <Esc>:q<CR>
+"map qq :q<CR>
+"imap qq <Esc>:q<CR>
 
 "映射home与end键
 imap <C-j> <Esc>I
@@ -168,6 +169,7 @@ map <silent>rp :RangerOpenProjectRootDir<CR>
 "============Yggdroot/LeaderF============
 "弹窗显示结果
 let g:Lf_WindowPosition = 'popup'
+
 "============vim-airline============
 "显示tab和buffer
 "let g:airline#extensions#tabline#enabled = 1
