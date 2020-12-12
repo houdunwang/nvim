@@ -310,7 +310,7 @@ set cmdheight=2
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 " 加快响应时间单位ms
-set updatetime=300
+set updatetime=100
 
 " 显示简短提示信息
 set shortmess+=c
