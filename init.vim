@@ -5,8 +5,19 @@ let mapleader=" "
 "显示行号
 set number
 
-let g:python_host_prog = '/usr/bin/python3'
-let g:python3_host_prog = '/usr/local/bin/python3.9'
+"let g:python_host_prog = '/usr/bin/python3'
+"let g:python3_host_prog = '/usr/local/bin/python3.9'
+" sneak 插件
+let g:sneak#label = 1
+map s <Plug>Sneak_s
+map S <Plug>Sneak_S
+
+set termguicolors
+if &term =~# '^screen'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 "共享剪贴板
 "set clipboard+=unnamed
 set clipboard+=unnamedplus
@@ -18,7 +29,7 @@ set cursorline
 set numberwidth=5  
 
 "列宽
-"set columns=85
+set columns=85
 
 "VIM风格
 colorscheme one
@@ -241,7 +252,11 @@ Plug 'alvan/vim-closetag'
 " 同时修改标签名
 Plug 'AndrewRadev/tagalong.vim'
 
+Plug 'justinmk/vim-sneak'
+
 Plug 'ryanoasis/vim-devicons'
+
+
 
 call plug#end()
 
@@ -338,7 +353,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-获取上/下错误发生的位置
+" 获取上/下错误发生的位置
 nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
 nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
 
