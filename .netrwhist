@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/hd/hdcms/app/Http/Controllers/Common'
+let g:netrw_dirhist_2='/home/hd/hdcms/app/Http/Controllers'
+let g:netrw_dirhist_1='/home/hd/hdcms/app/Http'
+let g:netrw_dirhist_0='/home/hd/hdcms/app'
+let g:netrw_dirhist_9='/home/hd/hdcms/app/Http'
+let g:netrw_dirhist_8='/home/hd/hdcms/app'
+let g:netrw_dirhist_7='/home/hd/hdcms'
+let g:netrw_dirhist_6='/home/hd/hdcms/app'
+let g:netrw_dirhist_5='/home/hd/hdcms'
+let g:netrw_dirhist_4='/'
