@@ -48,7 +48,7 @@ let g:floaterm_keymap_toggle = '<C-h>'
 highlight Normal guibg=NONE ctermbg=None
 
 "状态栏显示方式 0:不显示 1:多窗口显示 2:始终显示
-set laststatus=0
+set laststatus=2
 
 "开启鼠标
 set mouse=a
@@ -83,6 +83,10 @@ exec "nohlsearch"
 "取消搜索结果高亮
 noremap <LEADER><CR> :nohlsearch<CR>
 
+" 保存
+imap <C-s> <Esc>:w<CR>a
+map <C-s> :w<CR>
+
 " 设置默认进行大小写不敏感查找
 set ignorecase
 
@@ -103,7 +107,7 @@ set wildmenu
 map <LEADER>sc :set spell!<CR>
 
 "最近文件切换 　
-"imap <C-e> <Esc><C-^>
+imap <C-e> <Esc><C-^>
 nmap <C-e> <C-^>
 
 "让s键失效
@@ -128,7 +132,7 @@ nmap J 5j
 nmap K 5k
 
 "重新加载配置文件
-map <C-r> :source ~/.config/nvim/init.vim<CR>
+map <A-r> :source ~/.config/nvim/init.vim<CR>
 
 "向左分屏
 nmap sl :set splitright<CR>:vsplit<CR>
@@ -274,31 +278,31 @@ let g:bracey_server_port=8080
 
 "======= nerdcommenter
 " Create default mappings
-" let g:NERDCreateDefaultMappings = 1
+ let g:NERDCreateDefaultMappings = 1
 
 " Add spaces after comment delimiters by default
-"let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 1
 
 " Use compact syntax for prettified multi-line comments
-"let g:NERDCompactSexyComs = 1
+let g:NERDCompactSexyComs = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
-"let g:NERDDefaultAlign = 'left'
+let g:NERDDefaultAlign = 'left'
 
 " Set a language to use its alternate delimiters by default
-"let g:NERDAltDelims_java = 1
+let g:NERDAltDelims_java = 1
 
 " Add your own custom formats or override the defaults
-"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 
 " Allow commenting and inverting empty lines (useful when commenting a region)
-"let g:NERDCommentEmptyLines = 1
+let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
-"let g:NERDTrimTrailingWhitespace = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
-"let g:NERDToggleCheckAllLines = 1
+let g:NERDToggleCheckAllLines = 1
 
 " 切换注释
 " map <c-m> <leader>ci
@@ -432,7 +436,7 @@ endif
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
+" nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
