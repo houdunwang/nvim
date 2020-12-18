@@ -5,6 +5,8 @@ let mapleader=" "
 "显示行号
 set number
 
+" 自动刷新浏览器
+let g:bracey_eval_on_save = 1
 "let g:python_host_prog = '/usr/bin/python3'
 "let g:python3_host_prog = '/usr/local/bin/python3.9'
 " sneak 插件
@@ -86,6 +88,9 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " 保存
 imap <C-s> <Esc>:w<CR>a
 map <C-s> :w<CR>
+
+" Bracey插件，b新浏览器
+map br :BraceyReload<CR>
 
 " 设置默认进行大小写不敏感查找
 set ignorecase
