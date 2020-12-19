@@ -1,4 +1,4 @@
-"============基础配置============
+"termguicolorstermguicolors============基础配置============
 "设置Leade为空格
 let mapleader=" "
 
@@ -11,14 +11,33 @@ let g:bracey_eval_on_save = 1
 "let g:python3_host_prog = '/usr/local/bin/python3.9'
 " sneak 插件
 let g:sneak#label = 1
-map s <Plug>Sneak_s
-map S <Plug>Sneak_S
+
+"====================sneaks快速搜索
+"map s <Plug>Sneak_s
+"map S <Plug>Sneak_S
 
 set termguicolors
 if &term =~# '^screen'
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+"======================vim-easymotion==================
+"两个字符快速跳转
+nmap s <Plug>(easymotion-s2)
+" 向下搜索也是两个字符
+"nmap t <Plug>(easymotion-t2)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 "共享剪贴板
 "set clipboard+=unnamed
@@ -37,6 +56,8 @@ set numberwidth=5
 colorscheme one
 set background=dark
 set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+color deus
 
 " vim-floaterm
 nnoremap tl :FloatermNew --height=0.95 --width=0.95 --wintype=floating --name=floaterm1 --position=center --autoclose=2 <CR>
@@ -270,7 +291,7 @@ Plug 'alvan/vim-closetag'
 " 同时修改标签名
 Plug 'AndrewRadev/tagalong.vim'
 
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak'
 
 Plug 'voldikss/vim-floaterm'
 Plug 'ryanoasis/vim-devicons'
