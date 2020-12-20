@@ -158,7 +158,7 @@ nmap J 5j
 nmap K 5k
 
 "重新加载配置文件
-map <A-r> :source ~/.config/nvim/init.vim<CR>
+map <LEADER>rc :source ~/.config/nvim/init.vim<CR>
 
 "向左分屏
 nmap sl :set splitright<CR>:vsplit<CR>
@@ -420,6 +420,7 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 "xmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
+nmap <C-p> <LEADER>f
 
 augroup mygroup
   autocmd!
