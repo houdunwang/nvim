@@ -2,6 +2,18 @@
 "设置Leade为空格
 let mapleader=" "
 
+"列宽
+"set columns=85
+
+"VIM风格
+"colorscheme one
+color gruvbox
+colorscheme deus
+set background=dark
+set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let g:airline_theme='one'
+
 "显示行号
 set number
 
@@ -49,15 +61,6 @@ set cursorline
 "行号宽度
 set numberwidth=5
 
-"列宽
-"set columns=85
-
-"VIM风格
-colorscheme one
-set background=dark
-set termguicolors
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-color deus
 
 " vim-floaterm
 nnoremap tl :FloatermNew --height=0.95 --width=0.95 --wintype=floating --name=floaterm1 --position=center --autoclose=2 <CR>
@@ -266,6 +269,9 @@ Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
 Plug 'editorconfig/editorconfig-vim'
 
+"vue相关
+Plug 'leafOfTree/vim-vue-plugin'"
+
 "ranger
 Plug 'rbgrouleff/bclose.vim'
 Plug 'iberianpig/ranger-explorer.vim'
@@ -296,6 +302,7 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'dracula/vim', { 'as': 'dracula' } 
 
 call plug#end()
 
