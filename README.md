@@ -47,7 +47,7 @@ pip3 install ranger-fm
 
 ### vim-plug
 
-可通过官网查看安装细节 https://github.com/junegunn/vim-plug，因为是国外服务器所以你要多试几次。为了帮助大家正常下载，下面的的链接地址已经放在后盾人CDN服务器上了。
+可通过官网查看安装细节 [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)，因为是国外服务器所以你要多试几次。为了帮助大家正常下载，下面的的链接地址已经放在后盾人 CDN 服务器上了。
 
 ```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
